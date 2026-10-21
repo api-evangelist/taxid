@@ -1,0 +1,9 @@
+generated: '2026-10-21'
+method: none
+source: none
+id: taxid-mcp
+type: MCPServer
+deployment:
+  mode: none
+  auth: none
+  verified: derived

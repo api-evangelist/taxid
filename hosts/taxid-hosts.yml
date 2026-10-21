@@ -1,0 +1,72 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - collections
+  - other
+  - website
+hosts:
+- host: api.taxid.pro
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: taxid.pro
+  role: api
+  relation: own
+- host: taxid.pro
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Pricing
+  - Login
+  - Blog
+  - Website
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Support
+  serves:
+  - docs
+  - hosting
+  vendor: vercel
+  registrable_domain: taxid.pro
+  role: website
+  relation: own
+- host: v2.taxid.pro
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: taxid.pro
+  role: other
+  relation: own
+- host: www.postman.com
+  found_by:
+  - pointer
+  types:
+  - Postman
+  serves: []
+  registrable_domain: postman.com
+  role: collections
+  relation: platform

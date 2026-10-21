@@ -1,23 +1,82 @@
 aid: taxid
+
 name: Tax ID Pro
-description: 'Tax ID Pro is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://taxid.pro/tax-id-pro-card.png
+
+description: 'Tax ID Pro provides an API service that validates tax identification numbers for over 100 countries worldwide. It offers a simple REST endpoint and an MCP integration, enabling developers to quickly verify business and personal tax IDs in applications, supporting batch checks and CSV processing. The platform emphasizes ease of integration, comprehensive country coverage, and reliable validation for fintech, compliance, and SaaS solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/taxid/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Tax
+- Validation
+- API
+- Fintech
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/taxid-hosts.yml
+- type: Vendors
+  url: vendors/taxid-vendors.yml
+- type: TermsOfService
+  url: https://taxid.pro/docs/terms-of-service
+- type: PrivacyPolicy
+  url: https://taxid.pro/docs/privacy-policy
+- type: Pricing
+  url: https://taxid.pro/pricing
+- type: Postman
+  url: https://www.postman.com/
+- type: Login
+  url: https://taxid.pro/login
+- type: Blog
+  url: https://taxid.pro/blog
+- type: DomainSecurity
+  url: security/taxid-domain-security.yml
 - type: Website
   url: https://taxid.pro/
+- type: Documentation
+  url: https://taxid.pro/docs/
+- type: APIReference
+  url: https://taxid.pro/docs/quick-check
+- type: GettingStarted
+  url: https://taxid.pro/docs/quick-check
+- type: Support
+  url: https://taxid.pro/docs/mcp
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's documentation pages are HTML only and no OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contracts were found.
+  evidence:
+    - url: https://taxid.pro/docs/quick-check
+      status: 200
+  checked: '2026-10-21'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

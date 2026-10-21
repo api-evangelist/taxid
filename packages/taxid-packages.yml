@@ -1,0 +1,15 @@
+generated: '2026-10-21'
+method: none
+source: https://registry.npmjs.org/-/v1/search?text=taxid&size=5
+packages: []
+rejected:
+- name: simple-de-taxid-validator
+  registry: npm
+  reason: 'official: false as written'
+- name: corporate-taxid-checker-js
+  registry: npm
+  reason: 'official: false as written'
+- name: taiwan-taxid-validator
+  registry: npm
+  reason: 'official: false as written'
+note: 'no first-party package: every candidate a model listed was unowned (harvest-packages.py --audit)'
